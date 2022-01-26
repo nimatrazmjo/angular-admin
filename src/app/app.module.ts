@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PublicModule } from './public/public.module';
+import { SecureModule } from './secure/secure.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +13,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    SecureModule,
+    PublicModule,
     AppRoutingModule
   ],
   providers: [],
