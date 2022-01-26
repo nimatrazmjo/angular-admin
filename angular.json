@@ -72,9 +72,11 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-admin:build:production"
+
             },
             "development": {
-              "browserTarget": "angular-admin:build:development"
+              "browserTarget": "angular-admin:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
