@@ -40,4 +40,13 @@ export class AuthService {
     return this.http.post<any>(`${this.AUTH_API}/logout`,{});
   }
 
+ updateProfile(data: User): Observable<User> {
+  return this.http.put<User>(`${this.AUTH_API}/profile`, data);
+ }
+
+ changePassword(data: {password: string, confirm_password: string}): Observable<any> {
+  return this.http.put<any>(`${this.AUTH_API}/profile`, data);
+ }
+
+
 }
