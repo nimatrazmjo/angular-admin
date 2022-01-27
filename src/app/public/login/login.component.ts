@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   constructor(
      private formBuilder: FormBuilder,
-     private http: HttpClient
+
+     private authService: AuthService
      ) {
 
    }
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit ():void {
-    this.http.post('/api/auth/login', this.form.getRawValue(),{withCredentials: true})
+    this.authService.login(this.form.getRawValue())
       .subscribe({next: result => console.log(result),
         error: error =>console.log(error)});
 

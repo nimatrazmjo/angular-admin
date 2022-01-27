@@ -1,3 +1,7 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
   <h1 class="h2">Dashboard</h1>
+  <nav class="d-flex mx-2 justify-content-center align-items-center">
+   <a [routerLink]="['/profile']" routerLinkActive="router-link-active" class="px-3" >{{user?.first_name}} {{user?.last_name}}</a>
+   <a routerLinkActive="router-link-active" class="text-black-50 logout" (click)="logout()">Log Out</a>
+  </nav>
 </div>
