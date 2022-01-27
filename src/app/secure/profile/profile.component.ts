@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Emitters } from '../../emitters/emitters';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -34,8 +35,8 @@ export class ProfileComponent implements OnInit {
 
   updateProfile(): void {
     this.authService.updateProfile(this.profileInfo.getRawValue()).subscribe({
-      next: (result) => console.log(result),
-      error: (err) => console.error(err),
+      next: (result) => Emitters.authEmitter.emit(result),
+      error: (err) =>  Emitters.authEmitter.emit(null),
     });
   }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Emitters } from '../emitters/emitters';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-secure',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecureComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.authService.currentUser().subscribe({
+      next: (user) => Emitters.authEmitter.emit(user),
+      error: (err) => Emitters.authEmitter.emit(null),
+    });
   }
 
 }
