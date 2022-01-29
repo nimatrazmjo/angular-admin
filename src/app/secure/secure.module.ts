@@ -11,6 +11,7 @@ import  { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { LinksComponent } from './links/links.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -21,7 +22,8 @@ import { LinksComponent } from './links/links.component';
     MenuComponent,
     ProfileComponent,
     UsersComponent,
-    LinksComponent
+    LinksComponent,
+    ProductsComponent
   ],
   imports: [
     CommonModule,

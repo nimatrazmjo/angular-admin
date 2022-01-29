@@ -4,6 +4,7 @@ import { LoginComponent } from './public/login/login.component';
 import { PublicComponent } from './public/public.component';
 import { RegisterComponent } from './public/register/register.component';
 import { LinksComponent } from './secure/links/links.component';
+import { ProductsComponent } from './secure/products/products.component';
 import { ProfileComponent } from './secure/profile/profile.component';
 import { SecureComponent } from './secure/secure.component';
 import { UsersComponent } from './secure/users/users.component';
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'users/:id/links',
         component: LinksComponent
+      },
+      {
+        path: 'products',
+        component: ProductsComponent
       }
     ]
   },
