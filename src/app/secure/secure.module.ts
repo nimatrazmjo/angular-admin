@@ -9,6 +9,8 @@ import { UsersComponent } from './users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import  { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { LinksComponent } from './links/links.component';
 
 
 
@@ -18,7 +20,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     NavComponent,
     MenuComponent,
     ProfileComponent,
-    UsersComponent
+    UsersComponent,
+    LinksComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +29,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
+    MatButtonModule,
     ReactiveFormsModule
   ],
 
