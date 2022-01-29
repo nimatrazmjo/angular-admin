@@ -1,0 +1,28 @@
+
+<main class="form-signin">
+  <form [formGroup]="productForms" (submit)="submit()">
+    <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+
+    <div class="form-floating">
+      <input type="text" formControlName="title" class="form-control" id="floatingInput" required placeholder="Title">
+      <label for="floatingInput">Title</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="number" formControlName="price" class="form-control" id="floatingInput" required placeholder="Price">
+      <label for="floatingInput">Price</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="file" formControlName="image" class="form-control" id="floatingInput" placeholder="image">
+      <label for="floatingInput">Image</label>
+    </div>
+    <div class="form-floating">
+      <textarea name="description" formControlName="description" class="form-control"></textarea>
+      <label for="floatingPassword">Descriptiion</label>
+    </div>
+
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+  </form>
+</main>
